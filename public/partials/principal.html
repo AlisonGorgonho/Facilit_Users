@@ -89,8 +89,10 @@
 
     <div class="col-lg-7 shadow-sm d-block container-usuarios">
 
-        <div class="row d-block">
-            <div ng-repeat="departamento in departamentosFiltrados">
+        <div class="row d-block" >
+
+            <!-- <div dir-paginate="departamento in departamentosFiltrados | itemsPerPage:3" ng-show="(usuariosFiltrados | filter: inputFilter | filter: departamento)[0]"> -->
+            <div ng-repeat="departamento in departamentosFiltrados" ng-show="(usuariosFiltrados | filter: inputFilter | filter: departamento)[0]">
                 <div class="w-100 departamento">
                     <div class="departamento">
                         <div class="nome-usuario departamento-2 ml-3 d-inline-flex font-padrao cor-padrao">
@@ -102,7 +104,7 @@
                         <hr class=" hr-estilizado">
                     </div>
                 </div>
-                <div class="painel-animado" ng-repeat="usuario in usuariosFiltrados | filter: inputFilter | filter: departamento ">
+                <div class="painel-animado" ng-repeat="usuario in usuariosFiltrados | filter: inputFilter | filter: departamento">
                     <div class="d-inline-flex">
                         <div class="foto">
                             <img class="avatar" src="{{usuario.photo}}" alt="usuario.name">
@@ -118,6 +120,10 @@
                 </div>
             </div>
         </div>
-
-
+        
+        
+    </div>
+    <div class="col-lg-7 ml-auto d-inline-flex">
+        <dir-pagination-controls direction-links="true" 
+        boundary-links="true" class="mt-3 mx-auto" ></dir-pagination-controls>
     </div>

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install"
+    "start": "node node_modules\\http-server\\bin\\http-server ./public -o",
+    "api-start": "node node_modules\\json-server\\bin\\index.js --watch api\\users.json"
   },
   "repository": {
     "type": "git",

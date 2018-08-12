@@ -1,4 +1,4 @@
-angular.module('facilitUsers', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
+angular.module('facilitUsers', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'angularUtils.directives.dirPagination'])
 .config(function($routeProvider){
     $routeProvider.when('/', {
         templateUrl: 'partials/principal.html',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="facilitUsers">
+<html lang="pt-br" ng-app="facilitUsers">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+        <script src="js/libs/dirPagination.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers/user-controller.js"></script>
         <script src="js/directives/mihas-diretivas.js"></script>
         
-        <title>Document</title>
+        <title>Facilit Users</title>
     </head>
     
     
@@ -21,9 +22,7 @@
     <body class="bg-ligh" ng-controller="UsersController">
         <div class="container m-auto">
             
-            <ng-view>
-                
-            </ng-view>
+            <ng-view></ng-view>
     
             <footer class="my-5 pt-5 text-muted text-center text-small">
                 <p class="mb-1">&copy; Facilit Tecnologia. Todos os Direitos Reservados</p>

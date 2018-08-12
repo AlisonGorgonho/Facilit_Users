@@ -1,4 +1,4 @@
-angular.module('facilitUsers').controller('UsersController', function ($scope, $http) {
+angular.module('facilitUsers').controller('UsersController', function ($scope, $http, $filter) {
     
     $scope.departamentos = [];
     $scope.cargos = [];
@@ -22,7 +22,6 @@ angular.module('facilitUsers').controller('UsersController', function ($scope, $
             if (a.name < b.name) {
                 return -1;
             }
-            // a must be equal to b
             return 0;
         });
         
@@ -65,14 +64,14 @@ angular.module('facilitUsers').controller('UsersController', function ($scope, $
         
         function filtroDepartamento(value){
             if ($scope.filtroDepartamento.includes(value)) {
-                console.log(value)
+                // console.log(value)
                 return value;
             }
         };
 
         function filtroCargos(value){
             if ($scope.filtroCargo.includes(value.role)) {
-                console.log(value)
+                // console.log(value)
                 return value;
             }
         };
@@ -87,61 +86,7 @@ angular.module('facilitUsers').controller('UsersController', function ($scope, $
         }
 
         $scope.inputFilter = $scope.filtroInput;
-        console.log($scope.departamentosFiltrados)
 
     }
-    
-    
-    $scope.filtroInput;
-    
-    $scope.filtroCargo;
-    
-    $scope.varControle = false;
-    
-    $scope.filtro1;
-    $scope.filtro2;
-    $scope.filtro3;
 
-
-
-
-  
-
-    $scope.fotos = [
-        // {
-        //     titulo: 'Kyoka Jiro',
-        //     url:    '../../imgs/kyoka_jiro.jpg' 
-        // },
-        // {
-        //     titulo: 'Katsuki Bakugo',
-        //     url:    '../../imgs/katsuki_bakugo.jpg' 
-        // },
-        // {
-        //     titulo: 'Mina Ashido',
-        //     url:    '../../imgs/mina_ashido.jpg' 
-        // },
-        // {
-        //     titulo: 'Ochaco Uraraka',
-        //     url:    '../../imgs/ochaco_uraraka.jpg' 
-        // },
-        // {
-        //     titulo: 'Shoto Todoroki',
-        //     url:    '../../imgs/shoto_todoroki.jpg' 
-        // }
-    ];
-
-
-
-    // Forma com promise
-
-    // var promise = $http.get('vi/fotos');
-
-    // promise.then(function(retorno){
-    //     $scope.fotos = retorno.data;
-    // }).catch(function(error){
-    //     console.log('Ocorreu um erro na requisição')
-    // });
-
-
-    
 });
