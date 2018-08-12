@@ -1,0 +1,193 @@
+/* importando fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+
+/* End */
+
+
+/* Efeitos de transição */
+
+.painel-animado.ng-leave-active {
+    -moz-transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+}
+
+.painel-animado {
+    -moz-transition:transform 0.8s;
+    -webkit-transition:transform 0.8s;
+    -ms-transition:transform 0.8s;
+    -o-transition:transform 0.8s;
+    transition:transform 0.8s;
+}
+
+/* End */
+
+/* Efeitos do scroll */
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    height: 120px;
+}
+
+/* End */
+
+
+.borda{
+    box-shadow: 5px;
+}
+
+.foto{
+    margin: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(236, 241, 241);
+    display: inline-flex;
+}
+
+.avatar{
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.descricao{
+    display: inline-block;
+    padding: auto;
+}
+
+.nome-usuario{
+    font-size: 20px;
+    display: block;
+    font-weight: 100;
+}
+
+.card-usuario{
+    display: inline-block;
+    height: 60px;
+    margin: auto;
+}
+
+
+.inputPesquisa{
+	background-image:url('../imgs/i-search.png');
+    background-repeat:no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+    height: 60px;
+}
+
+.botao-departamento{
+    background-image:url('../imgs/i-departamento.png');
+    background-repeat:no-repeat;
+    background-position: left;
+    text-align: center !important;
+}
+
+.botao-cargo{
+    background-image:url('../imgs/i-cargo.png');
+    background-repeat:no-repeat;
+    background-position: left;
+    text-align: center;
+}
+
+
+.sem-padding{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body{
+    margin-top: 80px;
+}
+
+.container-usuarios{
+    overflow: scroll; 
+    height: 550px;
+    overflow-x: hidden;
+}
+
+.container-filtro{
+    height: 400;
+}
+
+.departamento{
+    display: inline-flex;
+}
+
+.departamento-2{
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+
+hr.hr-estilizado{
+    color: rgb(51,126,132);
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.font-padrao{
+    font-family: 'Roboto', sans-serif;
+}
+
+.borda-shadow{
+    box-shadow: 5px 10px;
+}
+
+.cor-padrao{
+    color: rgb(51,126,132);
+}
+
+.btn-padrao{
+    height: 60px;
+    background-color: rgb(252, 252, 252);
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgb(220, 220, 220);
+}
+
+.light-font{
+    opacity:0.65;
+}
+
+::placeholder{
+    color: rgb(51,126,132);
+    opacity:0.65;
+}
+
+.btn-filtrar{
+    width: 140px;
+    border-radius: 0;
+    background-color: rgb(51,126,132);
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    color: rgb(252, 252, 252);
+}
+
+.dropdown-padrao{
+    height: 400px;
+    overflow: scroll; 
+    overflow-x: hidden;  
+}
+
+.checkbox-padrao{
+    width: 40px;
+    height: 40px;
+}

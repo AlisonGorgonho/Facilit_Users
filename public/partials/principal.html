@@ -1,0 +1,123 @@
+<div class="row col-md-12">
+
+    <div class="col-lg-5 container-filtro">
+
+        <div>
+            <h3 class="cor-padrao font-padrao font-weight-light">Filtrar Colaboradores</h3>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" ng-model="filtroInput" class="form-control inputPesquisa shadow-sm rounded-0" placeholder="Filtrar por todos os campos"
+                aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="w-100">
+            <p class="text-center" style="color: rgb(51,126,132);">OU</p>
+        </div>
+
+        <div>
+            <p class="cor-padrao mb-1 ml-2">Filtrar por categoria</p>
+        </div>
+
+        <div class="btn-group  btn-lg d-flex d-fluid w-100 btn sem-padding mb-2 rounded-0" role="group" aria-label="Button group with nested dropdown">
+
+
+            <button type="button" class="btn btn-lg d-flex btn-padrao dropright shadow-sm w-100 sem-padding rounded-0" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+
+                <div class="ml-4 py-auto">
+                    <img src="imgs/i-departamento.png" alt="" srcset="">
+                </div>
+
+                <div class="ml-4 pt-auto font-padrao font-ligth cor-padrao font-weight-light rounded-0">
+                    DEPARTAMENTO
+                </div>
+
+                <div class="ml-auto mr-4">
+                    <img src="imgs/twotone-keyboard_arrow_right-24px.svg" alt="" srcset="">
+                </div>
+
+            </button>
+
+            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+                <div class="dropdown-item d-block dropdown-padrao  w-100 sem-padding rounded-0" type="button">
+                    <div class="d-flex font-padrao font-ligth cor-padrao font-weight-light  btn-padrao" ng-repeat="departamento in departamentos">
+                        <span class="ml-3 my-auto">{{departamento}}</span>
+                        <input class="my-auto ml-auto mr-2 checkbox-padrao" ng-click="adicionaDepartamentoERemove(departamento)" type="checkbox">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-group dropdown  btn-lg d-flex d-fluid w-100  btn sem-padding rounded-0" role="group" aria-label="Button group with nested dropdown">
+
+
+            <button type="button" id="dropdownMenu2" class="btn btn-lg d-flex btn-padrao shadow-sm w-100 sem-padding rounded-0" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="ml-4 py-auto">
+                    <img src="imgs/i-cargo.png" alt="" srcset="">
+                </div>
+
+                <div class="ml-4 pt-auto font-padrao font-ligth cor-padrao font-weight-light">
+                    CARGOS
+                </div>
+
+                <div class="ml-auto mr-4">
+                    <img src="imgs/twotone-keyboard_arrow_right-24px.svg" alt="" srcset="">
+                </div>
+            </button>
+            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+                <div class="dropdown-item d-block dropdown-padrao  w-100 sem-padding rounded-0" type="button">
+                    <div class="d-flex font-padrao font-ligth cor-padrao font-weight-light btn-padrao" ng-repeat="cargo in cargos">
+
+                        <span class="ml-3 my-auto">{{cargo}}</span>
+                        <input class="my-auto ml-auto mr-2 checkbox-padrao" ng-click="adicionaCargoERemove(cargo)" type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 centralizar">
+
+            <button type="button" class="btn mt-3 btn-lg d-flex mx-auto btn-filtrar text-center mb-4" ng-click="filtrar()">
+                <span class="mx-auto">FILTRAR</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-7 shadow-sm d-block container-usuarios">
+
+        <div class="row d-block">
+            <div ng-repeat="departamento in departamentosFiltrados">
+                <div class="w-100 departamento">
+                    <div class="departamento">
+                        <div class="nome-usuario departamento-2 ml-3 d-inline-flex font-padrao cor-padrao">
+                            {{ departamento }}
+                        </div>
+
+                    </div>
+                    <div class="w-100">
+                        <hr class=" hr-estilizado">
+                    </div>
+                </div>
+                <div class="painel-animado" ng-repeat="usuario in usuariosFiltrados | filter: inputFilter | filter: departamento ">
+                    <div class="d-inline-flex">
+                        <div class="foto">
+                            <img class="avatar" src="{{usuario.photo}}" alt="usuario.name">
+                        </div>
+
+                        <div class="card-usuario cor-padrao">
+                            <span class="nome-usuario font-padrao fonte-fina">{{ usuario.name }}</span>
+                            <small class="cor-padrao light-font">{{usuario.role}}</small>
+                        </div>
+                    </div>
+                    <hr class="mx-3">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
