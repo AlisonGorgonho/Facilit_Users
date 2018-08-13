@@ -32,7 +32,7 @@ Projeto requisito para o processo seletivo de desenvolvedor front-end na [Facili
 
 ## For docker lovers
 
-* coming soon ![docker pet](https://imgur.com/a/OjZNN1B)
+* coming soon ![docker pet](https://i.imgur.com/xsHQ0nr.gif)
 
 ---
 
