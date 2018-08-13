@@ -1,6 +1,7 @@
 # Facilit_Users
 Projeto requisito para o processo seletivo de desenvolvedor front-end na [Facilit](http://facilit.com.br/)
 
+---
 
 ## Tecnologias utilizadas
 
@@ -31,10 +32,10 @@ Projeto requisito para o processo seletivo de desenvolvedor front-end na [Facili
 
 ## For docker lovers
 
-* comming soon ![docker pet](https://s3.amazonaws.com/media-p.slid.es/uploads/541215/images/3735869/moby.gif)
+* coming soon ![docker pet](https://imgur.com/a/OjZNN1B)
 
 ---
 
 
-> ハードワークは自然の贈り物を打つ.
+> ハードワークは自然の贈り物を打つ.</br>
 > Rock Lee
