@@ -1,5 +1,0 @@
-FROM node:latest
-
-RUN npm install
-RUN npm start
-RUN npm run api-start

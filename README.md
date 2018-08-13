@@ -18,7 +18,7 @@ Projeto requisito para o processo seletivo de desenvolvedor front-end na [Facili
 * Faça o download desse repositório
 * npm install
 * npm run api-start
-* npm 
+* npm start
 
 ---
 
@@ -29,5 +29,12 @@ Projeto requisito para o processo seletivo de desenvolvedor front-end na [Facili
 
 ---
 
+## For docker lovers
+
+* comming soon ![docker pet](https://s3.amazonaws.com/media-p.slid.es/uploads/541215/images/3735869/moby.gif)
+
+---
+
+
 > ハードワークは自然の贈り物を打つ.
-<p>Rock Lee</p>
+> Rock Lee
